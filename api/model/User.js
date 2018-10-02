@@ -1,7 +1,7 @@
 const mongoose=require('mongoose');
 
 var schema=new mongoose.Schema({
-    name:{type:String}
+    name:String,
 });
 
 module.exports=mongoose.model('User',schema);
