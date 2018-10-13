@@ -13,9 +13,8 @@ var model={
     saveUser:async function(data){
         console.log(data);
         var user = new User(data);
-        
         try {
-            result =await User.find({_id:data.id});
+            result =await user.save();
             return result;
         } catch (error) {
             console.log(error.message)
