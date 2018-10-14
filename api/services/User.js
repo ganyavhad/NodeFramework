@@ -29,7 +29,16 @@ var model={
             console.log(error.message)
             return error.message;
         }
-           }
+    },
+    getUserByName:async function(data){
+        try {
+            result =await User.find({name:data.name});
+            return result;
+        } catch (error) {
+            console.log(error.message)
+            return error.message;
+        }
+    }
 }
 
 module.exports = model;
